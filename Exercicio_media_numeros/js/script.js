@@ -1,13 +1,9 @@
-let primeiraMedia, segundaMedia, somaDuasMedias, mediaDasMedias
+let numero, totalNum = [], media = 0
 
-primeiraMedia = (8 + 9 + 7) / 3
-console.log(`A media de 8, 9 e 7 ${primeiraMedia.toFixed(2)}`) 
-
-segundaMedia = (4 + 5 + 6) / 3
-console.log(`A media de 4, 5 e 6 é ${segundaMedia.toFixed(2)}`)
-
-somaDuasMedias =  primeiraMedia + segundaMedia
-console.log(`A soma das duas primeiras médias é ${somaDuasMedias.toFixed(2)}`)
-
-mediaDasMedias = (primeiraMedia + segundaMedia) / 2
-console.log(`A média das médias é ${mediaDasMedias.toFixed(2)}`)
+while (numero !== -1) {
+    numero = parseInt(prompt('Digite um número inteiro: (-1 pra parar)'))
+    if (numero === -1) continue
+    totalNum.push(numero)
+    media = (totalNum.reduce((a, b) => a + b)) / totalNum.length
+}
+console.log(`Média da soma de todos os números ${media.toFixed(1)}`)
